@@ -5,7 +5,13 @@
 @endsection
 
 @section('main')
-    @foreach ($products as $product)
-        @include("partials.card")       
-    @endforeach
+    <div class="container">
+        <div class="row row-cols-3 g-5">
+            @foreach ($products as $product)
+                <div class="col">
+                    @include("partials.card")       
+                </div>
+            @endforeach
+        </div>
+    </div>
 @endsection

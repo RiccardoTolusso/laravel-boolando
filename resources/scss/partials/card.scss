@@ -1,0 +1,10 @@
+img.front-image{
+    opacity: 1;
+    transition: opacity 0.5s;
+    position: relative;
+    z-index: 2;
+}
+
+img.front-image:hover{
+    opacity: 0;
+}
