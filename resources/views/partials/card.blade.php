@@ -15,9 +15,14 @@ foreach ($product['badges'] as $key => $badge) {
     <div class="position-relative">
         <img class="w-100 front-image" src="{{ Vite::asset('resources/img/'. $product['frontImage']) }}" alt="Immagine prodotto">
         <img class="w-100 position-absolute top-0 start-0" src="{{ Vite::asset('resources/img/'. $product['backImage']) }}" alt="Immagine  class ="mb-0"prodotto lass ="mb-0"">
+        
+        <div class="position-absolute d-flex gap-2 badges-section">
+            @foreach (array_reverse($product['badges']) as $badge)
+                @include("partials.badge")
+            @endforeach
+        </div>
     </div>
 
-    
 
     {{-- TITOLO E PREZZO --}}
     <span class="mb-0 fs-5">{{ $product['brand'] }}</span>
